@@ -1,0 +1,376 @@
+/*set fallback color for page if images end up not loading/take too long to load */
+html {
+    background-color: lightblue;
+}
+/*set a different background image for each of the pages*/
+.index {
+    background: url("pictures/homebackground1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.about {
+    background-image: url("pictures/aboutbackground.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.music {
+    background-image: url("pictures/musicbackground.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contact {
+    background-image: url("pictures/contactbackground.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*formatting text for h1 and p tags*/
+h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 2em;
+    color: #313131;
+    margin: 20px;
+}
+
+p {
+    font-family: "Varela Round", sans-serif;
+    font-size: 1em;
+    color: #313131;
+    margin: 20px;
+}
+
+/*Customizing the navigation bar and logo*/
+/*We select the links and lists of the navigation bar and format the text*/
+
+li, a {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    color: #313131;
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+/*Apply flex properties to navbar class*/
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*When the user hovers over the links with their mouse, the color of the links will change to indicate possible interactivity*/
+.navigation li a:hover{
+    color: white;
+}
+
+/*Put the rest of the content on the home page in flexbox and manipulate*/
+.home-content {
+    display: flex;
+}
+
+#home_about{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+
+/*Resize images on home pages*/
+#about_img img, #music_img img {
+    width: 300px;
+    height: 300px;
+}
+
+
+#about_img img {
+    display: flex;
+    float: none;
+    margin: auto;
+    align-items: center;
+}
+
+#music_img img {
+    display: flex;
+    float: none;
+    margin: auto;
+    align-items: center;
+}
+
+#about_body, #music_body{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+/*ensures that on a larger screen my image will only grow to its full size*/
+img {
+    max-width: 100%;
+}
+
+/*media query that alters some of the declarations for screens 500px wide and less*/
+@media (max-width: 500px){
+    li, a {
+        font-size: 0.9em;
+    }
+
+    .navigation {
+        display: flex;
+        margin-right: 5%;
+    }
+
+    .logo {
+        width: 150px;
+        height: 25px;
+    }
+
+    #ph2 {
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .music_list h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    #discography {
+        text-align: center;
+    }
+    #disco_nav li {
+        display: flex;
+    }
+
+    #promo iframe {
+        width: 300px;
+        height: 200px;
+    }
+
+    .music_list img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .music h1 {
+        font-size: 1.5em;
+    }
+
+    .artwork {
+        display: flex;
+        float: none;
+        margin: auto;
+        align-items: center;
+    }
+}
+
+/*media query that applies certain settings to screen sizes with a minimum width of 1000px*/
+@media (min-width: 1000px){
+    li, a {
+        padding: 0px 15px;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 50px;
+    }
+
+    h1{
+        font-size: 3.5em;
+    }
+
+    #about_img img {
+        float: right;
+        margin-right: 80px;
+        margin-top: 40px;
+    }
+
+    #music_img img {
+        float: left;
+        margin-left: 80px;
+        margin-bottom: 100px;
+    }
+
+    #music_body {
+        margin-left: 35%;
+        padding-right: 60px;
+        text-align: right;
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+    
+    #about_body {
+        margin-right: 35%;
+        padding-left: 60px;
+        text-align: left;
+        margin-top: 60px;
+    }
+
+    footer, small {
+        margin-top: 100px;
+    }
+    
+    .music_list h2 {
+        font-size: 3em;
+        float: right;
+        margin-right: 30px;
+        margin-top: 100px;
+    }
+
+    #disco_nav {
+        position: relative;
+        right: 45px;
+    }
+    
+}
+/*controlling what the strong tag looks like and how it acts when mouse pointer hovers over it*/
+strong {
+    font-family: "Inter", sans-serif;
+    color: #2274A5;
+}
+
+strong:hover {
+    color: #9DB5B2;
+}
+
+/*format the footer*/
+.footer, small {
+    font-family: "Varela Round", sans-serif;
+    color: #313131; 
+    font-size: 0.9em;
+    text-align: center;
+    border-color:#313131;
+    margin-top: 100px;
+    clear: left;
+}
+
+/*formatting and positioning the about page*/
+#biography {
+    display: flex;
+    margin: 20px 5px;
+}
+
+#biography #ph1 {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+#biography h1 {
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#biography .text {
+    font-family: "Varela Round", sans-serif;
+    font-size: 1em;
+    color: #313131;
+    box-sizing: border-box;
+    margin: 0px 80px;
+    line-height: 1.6em;
+}
+
+#biography .text em {
+    font-style: italic;
+}
+
+#biography .text abbr {
+    text-decoration: none;
+}
+/*image positioning on about page*/
+#ph2 {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+#ph3 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/*formatting and positioning the #intro_music and #startMore id tags*/
+#intro_music, #startMore{
+    position: relative;
+    text-align: center;
+    float: center;
+    margin: 40px 40px 20px;
+}
+
+#intro_music strong, em{
+    font-family: "Inter", sans-serif;
+    color: #313131;
+    font-style: normal;
+}
+
+/*selecting everything in the promo id tag and positioning it*/
+#promo *{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*formatting the music page and allowing changes for hovering*/
+#discography {
+    text-align: left;
+}
+
+
+#disco_nav a:hover{
+    color: white;
+}
+
+.music_list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+
+
+/*for the discography, the links will have different colors when clicked on, hovered on, and after they have been used*/
+.music_list a:link {
+    color: #313131;
+}
+
+.music_list a:visited{
+    color: #2274A5;
+}
+
+.music_list a:hover{
+    color: white;
+}
+
+.music_list a:active {
+    color: #9DB5B2;
+}
+
+.music_list img {
+    float: center;
+}
+
+.streaming {
+    text-align: center;
+}
+
+/*formatting contact us page*/
+#contact_details {
+    text-align: center;
+    margin-top: 130px;
+    
+}
+#social_media {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 270px;
+}
